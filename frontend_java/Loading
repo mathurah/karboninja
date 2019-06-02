@@ -1,0 +1,40 @@
+package load;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class loading {
+	static JFrame j = new JFrame();
+public loading(){
+	init();
+}
+public void init(){
+	
+	
+	j.setResizable(true);
+	j.setLayout(new BorderLayout());
+	j.setSize(1000, 500);
+	j.setVisible(true);
+	j.setLocationRelativeTo(null);
+
+	JPanel p = new JPanel();
+	p.setLayout(null);
+	p.setSize(1000, 500);
+	p.setBackground(Color.WHITE);
+	
+	Icon imgIcon = new ImageIcon("ninja.gif");
+	JLabel label = new JLabel(imgIcon);
+	label.setBounds(250, -20, 480, 470); // for example, you can use your own values
+	p.add(label);
+	j.add(BorderLayout.CENTER, p);
+}
+public static void  diss(){
+	j.setVisible(false);
+}
+}
