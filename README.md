@@ -1,4 +1,4 @@
-##KarboNinja
+# KarboNinja
 **An AI solution to help car manufacturers predict and reduce their cars' carbon footprint.**
 **By Aditya, Mathurah, Sanaa, and Muhammad.**
 
