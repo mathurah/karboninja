@@ -25,3 +25,4 @@ We're hoping to incorporate blockchain technology and put all the information on
 
 Link to website: www.mathurahravigulan.com/karboninja
 Link to pitch deck: https://docs.google.com/presentation/d/1QLXlBsKhEBocet8ckiC-C5UNuUSsbz_EhfnVsLuEjs0/edit?usp=sharing
+Link to Devpost: https://devpost.com/software/karboninja
