@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+#KarboNinja
+**An AI solution to help car manufacturers predict and reduce their cars' carbon footprint.**
+**By Aditya, Mathurah, Sanaa, and Muhammad.**
 
-You can use the [editor on GitHub](https://github.com/mathurahravigulan/cryptochickshackathon/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Inspiration
+After learning about the Volkswagen carbon emission scandal, we learned that data often about carbon emissions is inaccessible for the public. For car manufacturers, it's hard to predict and calculate carbon taxes and emissions for new models that are being developed.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## What our solution does
+Our solution is an artificial intelligence based application that allows the user to input the specifications of their car, specifically the engine size, cylinders, and combined fuel combustion to predict the carbon emissions of the vehicle, as well as classify the efficiency/eco-friendly level of the vehicle from 1-10 based on the emissions. 
 
-### Markdown
+## How it was created
+The front-end/user interface was created with using the java swing library. Also the addition of Java awt library, incorporated many interact-able options and allowed to take input from the program. The use of external files allowed us to communicate between the 2 languages and acted as a bridge. The back-end uses a multi-linear regression ML model as the AI engine which trained to a near 90% accuracy. It was created with an array of python packages including pandas and matplotlib for data preprocessing/analytics, and Keras and Scikit-Learn to build and create the model. The trained model, after receiving and collecting user data from the front-end feeds it into the model and sends the predicted value back to the front-end. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Challenges we faced
+We faced some main challenges in ensuring out AI model is accurate and also connecting the model to the inputted data on the Java application.
 
-```markdown
-Syntax highlighted code block
+## Accomplishments that we're proud of
+We're proud that we have created a working demo in such little time, incorporating such exponential technology and skills required in artificial intelligence and data science. Additionally, we were able to train our model to about a 90% accuracy. We're also proud that we were able to solve an important problem in the world and target an issue concerning climate change. 
 
-# Header 1
-## Header 2
-### Header 3
+## What we learned
+We learned important problem-solving skills, and how to leverage data and create models to produce accurate solutions.
 
-- Bulleted
-- List
+## What's next for KarboNinja
+We're hoping to incorporate blockchain technology and put all the information on a ledger to make carbon emissions data accessible to consumers as well, for greater visibility. 
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mathurahravigulan/cryptochickshackathon/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
