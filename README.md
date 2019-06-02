@@ -1,4 +1,4 @@
-#KarboNinja
+##KarboNinja
 **An AI solution to help car manufacturers predict and reduce their cars' carbon footprint.**
 **By Aditya, Mathurah, Sanaa, and Muhammad.**
 
@@ -23,3 +23,5 @@ We learned important problem-solving skills, and how to leverage data and create
 ## What's next for KarboNinja
 We're hoping to incorporate blockchain technology and put all the information on a ledger to make carbon emissions data accessible to consumers as well, for greater visibility. 
 
+Link to website: www.mathurahravigulan.com/karboninja
+Link to pitchh deck: https://docs.google.com/presentation/d/1QLXlBsKhEBocet8ckiC-C5UNuUSsbz_EhfnVsLuEjs0/edit?usp=sharing
