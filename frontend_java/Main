@@ -1,0 +1,374 @@
+package main;
+
+import java.applet.Applet;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+
+import load.loading;
+
+public class Main extends Applet implements ActionListener {
+	
+Boolean done = false;
+Boolean d = false;
+	String[] VehicalClass = { "COMPACT", "SUV - SMALL", "MID-SIZE",
+			"MINICOMPACT", "SUBCOMPACT", "TWO-SEATER", "FULL-SIZE",
+			"STATION WAGON - SMALL", "SUV - STANDARD", "VAN - CARGO",
+			"VAN - PASSENGER", "PICKUP TRUCK - STANDARD", "MINIVAN" };
+	String[] Cylinder = { "2", "4", "6", "8", "10", "12" };
+	JComboBox Cylinder1 = new JComboBox(Cylinder);
+	PrintWriter out;
+	JComboBox VehicalClass1 = new JComboBox(VehicalClass);
+	JButton b1 = new JButton("go");
+	JTextField f1 = new JTextField(200);
+	JTextField f2 = new JTextField(200);
+	JTextField f3 = new JTextField(200);
+	JTextField f4 = new JTextField(200);
+	JTextField f5 = new JTextField(200);
+	JTextField f6 = new JTextField(200);
+	JTextField f7 = new JTextField(200);
+	JTextField f8 = new JTextField(200);
+	JTextField f9 = new JTextField(200);
+	File statText = new File("C:\\Users\\admin\\PycharmProjects\\ViaPool\\out.txt");
+	FileOutputStream is = new FileOutputStream(statText);
+    OutputStreamWriter osw = new OutputStreamWriter(is);    
+    Writer w = new BufferedWriter(osw);
+	String s1, s2, s3, s4, s5, s6, s7, s8, s9, s10;
+	File file = new File("C:\\Users\\admin\\PycharmProjects\\ViaPool\\out3.txt"); 
+	  // C:\\Users\\admin\\PycharmProjects\\ViaPool\\out.txt
+	  BufferedReader br = new BufferedReader(new FileReader(file)); 
+	  JPanel p1 = new JPanel();
+		JPanel p2 = new JPanel();
+			JFrame f = new JFrame();
+		JPanel p3 = new JPanel();	
+		String s11,s22,s33,s44;
+		JButton y1,y2,y3,y4,y5;
+		JLabel h1,h2,h3,h4,h5,h6,h7;
+		String s12,s13;
+	public Main() throws IOException {
+		dio();
+	}
+
+	private void dio() throws IOException {
+		File img123 = new File("C:\\Users\\admin\\Desktop\\img1.jpg"); 
+		ImageIcon rose = new ImageIcon("image1.jpg");
+		Image img1 = rose.getImage();
+		Image newimg1 = img1.getScaledInstance(380, 270,
+				java.awt.Image.SCALE_SMOOTH); // scaled image to fit 100x70
+		ImageIcon rosepic1 = new ImageIcon(newimg1);
+		JLabel lbl = new JLabel(rosepic1);
+		
+	
+p2.setBackground(Color.white);
+	
+		f.setLayout(null);
+		f.setSize(1000, 500);
+		
+		p1.setLayout(null);
+		p2.setLayout(null);
+
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setResizable(true);
+		f.setLayout(new BorderLayout());
+
+		f.setLocationRelativeTo(null);
+		f.setVisible(true);
+
+		p1.setBackground(Color.LIGHT_GRAY);
+		JButton b1 = new JButton("GO");
+		b1.setBounds(310, 340, 200, 40);
+
+		p1.add(b1);
+
+		JLabel M = new JLabel("Make");
+		M.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		M.setBounds(10, 10, 100, 50);
+		f1.setBounds(10, 50, 200, 20);
+		JLabel Md = new JLabel("Model");
+		Md.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		Md.setBounds(10, 80, 100, 50);
+		f2.setBounds(10, 130, 200, 20);
+		JLabel VC = new JLabel("Vehical Class");
+		VC.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		VC.setBounds(10, 150, 150, 50);
+		VehicalClass1.setBounds(10, 200, 200, 20);
+		JLabel ES = new JLabel("Engine Size");
+		ES.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		ES.setBounds(10, 230, 150, 50);
+		f4.setBounds(10, 280, 200, 20);
+		JLabel C = new JLabel("Cylinders");
+		C.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		C.setBounds(10, 300, 100, 50);
+		Cylinder1.setBounds(10, 350, 200, 20);
+		JLabel T = new JLabel("Transmission");
+		T.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		T.setBounds(310, 10, 150, 50);
+		f6.setBounds(310, 60, 200, 20);
+		JLabel CC = new JLabel("City Fuel Consumption");
+		CC.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		CC.setBounds(310, 80, 350, 50);
+		f7.setBounds(310, 130, 200, 20);
+		JLabel CH = new JLabel("Hwy Fuel Consumption ");
+		CH.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		CH.setBounds(310, 150, 350, 50);
+		f8.setBounds(310, 200, 200, 20);
+		JLabel CCo = new JLabel("Combined Fuel Consumption");
+		CCo.setFont(new Font("High Tower Text", Font.PLAIN, 20));
+		CCo.setBounds(310, 220, 350, 50);
+		f9.setBounds(310, 270, 200, 20);
+		b1.setBackground(new Color(255, 0, 0));
+		lbl.setBounds(250, -150, 1000, 750);
+		VehicalClass1.setSelectedIndex(0);
+		Cylinder1.setSelectedIndex(0);
+
+		p1.add(M);
+		p1.add(f1);
+		p1.add(Md);
+		p1.add(f2);
+		p1.add(VC);
+
+		p1.add(ES);
+		p1.add(f4);
+		p1.add(C);
+
+		p1.add(T);
+		p1.add(f6);
+		p1.add(CC);
+		p1.add(f7);
+		p1.add(CH);
+		p1.add(f8);
+		p1.add(CCo);
+		p1.add(f9);
+		p1.add(lbl);
+		p1.add(VehicalClass1);
+		p1.add(Cylinder1);
+		
+		b1.addActionListener(this);
+		
+		 f.add(BorderLayout.CENTER, p2);
+		f.add(BorderLayout.CENTER, p1);
+		
+	
+		
+	}
+
+
+
+	public static void main(String[] args) throws IOException {
+		new Main();
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+	
+		s1=f1.getText();
+		s2=(String) VehicalClass1.getSelectedItem();
+		s3=f3.getText();
+		s4 = f4.getText();
+		s5 = (String) Cylinder1.getSelectedItem();
+		s6 = f6.getText();
+		s7 = f7.getText();
+		s8 = f8.getText();
+		s9 = f9.getText();
+		
+		
+		try {
+			
+			w.write(s4);
+			w.write("\n");  
+			w.write(s5);
+			w.write("\n");
+			w.write(s9);
+			done();
+			w.close();
+			
+
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+	}
+	
+
+	private void done() {
+		p1.setVisible(false);
+		f.setVisible(false);
+		new loading();
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() { 
+		   @Override  
+		   public void run() {
+			   loading.diss();
+		       
+		 f.setVisible(true);
+	
+		 f.add(BorderLayout.CENTER, p2);
+		 ImageIcon car = new ImageIcon("car.png");
+			Image car1 = car.getImage();
+			Image newcar1 = car1.getScaledInstance(650, 450,
+					java.awt.Image.SCALE_SMOOTH); // scaled image to fit 100x70
+			ImageIcon carpic1 = new ImageIcon(newcar1);
+			JLabel lbl1 = new JLabel(carpic1);
+			lbl1.setBounds(0,0,650,400);
+			p2.setBackground(new Color(252,217,151	));
+			p2.add(lbl1);
+
+			 y1 = new JButton("y1");//Vehicle Class		
+			y1.setBounds(250,100,30,20);
+			 y2 = new JButton("y2");//Engine size
+			y2.setBounds(510,170,30,20);
+			 y3 = new JButton("..");//cylinders
+			y3.setBounds(450,150,30,20);
+			y4 = new JButton("..");//Transmission	
+			y4.setBounds(250,250,30,20);
+			y5 = new JButton("..");//Combined fuel consumption
+			y5.setBounds(30,150,30,20);
+			h1 = new JLabel(" ");
+			h2 = new JLabel(s1);
+			h2.setFont(new Font("Times New Roman", Font.BOLD, 35));
+			h3 = new JLabel(s2);
+			h3.setFont(new Font("Times New Roman", Font.PLAIN, 25));
+			h4 = new JLabel("Carbon Ommisions g/miles");
+			h4.setFont(new Font("Times New Roman", Font.PLAIN, 25));
+			h5 = new JLabel(" ");
+			h5.setFont(new Font("Times New Roman", Font.BOLD, 40));
+			try {
+				s9=br.readLine();
+		
+				
+				h5.setText(s9); 
+				
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			h6 = new JLabel("Carbon Rating ");
+			h6.setFont(new Font("Times New Roman", Font.PLAIN, 25));
+			h7 = new JLabel(" ");
+			h7.setFont(new Font("Times New Roman", Font.BOLD, 40));
+			if(Integer.parseInt(s9)<=204&&Integer.parseInt(s9)>=0){
+				h7.setText("10");
+			}
+			if(Integer.parseInt(s9)<237&&Integer.parseInt(s9)>205){
+				h7.setText("9");
+			}
+			if(Integer.parseInt(s9)<273&&Integer.parseInt(s9)>238){
+				h7.setText("8");
+			}
+			if(Integer.parseInt(s9)<301&&Integer.parseInt(s9)>274){
+				h7.setText("7");
+			}
+			if(Integer.parseInt(s9)<335&&Integer.parseInt(s9)>302){
+				h7.setText("6");
+			}
+			if(Integer.parseInt(s9)<395&&Integer.parseInt(s9)>336){
+				h7.setText("5");
+			}
+			if(Integer.parseInt(s9)<456&&Integer.parseInt(s9)>396){
+				h7.setText("4");
+			}
+			if(Integer.parseInt(s9)<539&&Integer.parseInt(s9)>457){
+				h7.setText("3");
+			}
+			if(Integer.parseInt(s9)<613&&Integer.parseInt(s9)>540){
+				h7.setText("2");
+			}
+			if(Integer.parseInt(s9)>614){
+				h7.setText("1");
+			}
+			h2.setBounds(700,10,300,40);
+			h3.setBounds(700,50,300,40);
+			h4.setBounds(700,100,300,40);
+			h5.setBounds(700,150,300,40);
+			h6.setBounds(700,200,300,40);
+			h7.setBounds(700,250,300,40);
+			
+			h1.setFont(new Font("High Tower Text", Font.PLAIN, 35));
+			h1.setBounds(0,300,1000,200);
+			y1.addActionListener( new ActionListener()
+		{
+		    @Override
+		    public void actionPerformed(ActionEvent e)
+		    {
+		        h1.setText("Vehicle Class: \n"+s2);
+		    }
+		});
+		y2.addActionListener( new ActionListener()
+		{
+		    @Override
+		    public void actionPerformed(ActionEvent e)
+		    { 
+		        h1.setText("Engine size:\n "+s4 +" Liters");
+		    }
+		});
+		y3.addActionListener( new ActionListener()
+		{
+		    @Override
+		    public void actionPerformed(ActionEvent e)
+		    {
+		        h1.setText("Cylinders:\n "+s5);
+		    }
+		});
+		y4.addActionListener( new ActionListener()
+		{
+		    @Override
+		    public void actionPerformed(ActionEvent e)
+		    {	
+		        h1.setText("Transmission: "+s6);
+		    }
+		});
+		y5.addActionListener( new ActionListener()
+		{
+		    @Override
+		    public void actionPerformed(ActionEvent e)
+		    {
+		        h1.setText("Combined Fuel Consumption:\n "+s9+" Gallons/mile");
+		    }
+		});
+			p2.add(y1);
+			p2.add(y2);
+			p2.add(y3);
+			p2.add(y4);
+			p2.add(y5);
+			p2.add(h1);
+			p2.add(h2);
+			p2.add(h3);
+			p2.add(h4);
+			p2.add(h5);
+			p2.add(h6);
+			p2.add(h7);
+			
+			
+		   } 
+		},  20000);
+		
+	}
+
+}
