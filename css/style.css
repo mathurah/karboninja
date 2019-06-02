@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 0; }
   @media screen and (max-width: 768px) {
     .video-hero {
-      heifght: inherit;
+      height: inherit;
       padding: 3em 0; } }
   .video-hero .overlay {
     position: absolute;
@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6, figure {
     display: table;
     margin: 0 auto;
     text-align: center;
-    background: #798eea;
+    background: #FF0000;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -456,7 +456,7 @@ h1, h2, h3, h4, h5, h6, figure {
     -webkit-box-shadow: 0 0 0 30px rgba(121, 142, 234, 0);
     box-shadow: 0 0 0 30px rgba(121, 142, 234, 0); }
   100% {
-    -moz-box-shadow: 0 0 0 0 rgba(121, 142, 234, 0);
+    -moz-box-shadow: 0 0 0 0 #FF0000;
     -webkit-box-shadow: 0 0 0 0 rgba(121, 142, 234, 0);
     box-shadow: 0 0 0 0 rgba(121, 142, 234, 0); } }
 
