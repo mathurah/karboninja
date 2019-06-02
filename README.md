@@ -24,4 +24,4 @@ We learned important problem-solving skills, and how to leverage data and create
 We're hoping to incorporate blockchain technology and put all the information on a ledger to make carbon emissions data accessible to consumers as well, for greater visibility. 
 
 Link to website: www.mathurahravigulan.com/karboninja
-Link to pitchh deck: https://docs.google.com/presentation/d/1QLXlBsKhEBocet8ckiC-C5UNuUSsbz_EhfnVsLuEjs0/edit?usp=sharing
+Link to pitch deck: https://docs.google.com/presentation/d/1QLXlBsKhEBocet8ckiC-C5UNuUSsbz_EhfnVsLuEjs0/edit?usp=sharing
